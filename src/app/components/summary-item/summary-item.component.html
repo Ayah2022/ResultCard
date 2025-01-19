@@ -1,0 +1,7 @@
+<li [class]="'result-card__summary-item result-card__summary-item ' + customClass">
+    <div class="d-flex align-items-center justify-flex-start">  
+        <img [src]="iconSrc" alt="{{ title }}" class="result-card__summary-item-icon" />
+        <span class="result-card__summary-item-title">{{ title }}</span>
+    </div>
+    <span class="result-card__summary-item-score">{{ score }}<span class="total"> / 100</span></span>
+</li>

@@ -1,0 +1,33 @@
+
+<div class="container">
+    <div class="result-card row">
+        <!-- Result Section -->
+        <div class="result-card__result col-md-6 col-12 text-center">
+          <h2 class="result-card__result-title">Your Result</h2>
+          <div class="result-card__circle">
+            <div class="result-card__score">76</div>
+            <div class="result-card__total">of 100</div>
+          </div>
+          <p class="result-card__status">Great</p>
+          <p class="result-card__description">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+      
+        <!-- Summary Section -->
+        <div class="result-card__summary col-md-6 col-12">
+          <h3 class="result-card__summary-title">Summary</h3>
+          <ul class="result-card__summary-list">
+                <app-summary-item *ngFor="let result of resultArray"
+                [title]="result.category"
+                [score]="result.score"
+                [iconSrc]="result.icon"
+                [customClass]="'result-card__summary-item--' + result.category.toLowerCase()"
+                ></app-summary-item>
+    
+          </ul>
+          <button class="result-card__continue-button">Continue</button>
+        </div>
+      </div>
+</div>
+
